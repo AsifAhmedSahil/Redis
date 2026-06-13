@@ -5,7 +5,7 @@ const app = express()
 
 app.use(express.json());
 
-
+// publisher
 const publisher = new Redis(process.env.REDIS_URL || 'redis://localhost:6379');
 
 app.post("/notifications",async(req,res)=>{
